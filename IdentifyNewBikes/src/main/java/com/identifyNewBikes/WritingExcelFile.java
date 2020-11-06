@@ -12,13 +12,14 @@ public class WritingExcelFile {
 	
 	public static XSSFWorkbook workbook;
 	public static void writeExcel(ArrayList<String> arr) {
+		//XSSFWorkbook
 		workbook = new XSSFWorkbook();
+		//XSSFSheet
 		XSSFSheet sheet = workbook.createSheet("Upcoming Honda Bikes");
-		
+		//Writing the data
 		Row row1 = sheet.createRow(0);
 		Cell cell1 = row1.createCell(0);
 		cell1.setCellValue("Upcoming Honda Bikes");
-		
 		int count = 0;
 		for(int i = 1;i<=arr.size();i++) {
 			
@@ -26,12 +27,9 @@ public class WritingExcelFile {
 			Cell cell = row.createCell(0);
 			cell.setCellValue(arr.get(count++));
 		}
-		
 		try {
-			
 			FileOutputStream file = new FileOutputStream("Bikes.xlsx");
 			workbook.write(file);
-			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

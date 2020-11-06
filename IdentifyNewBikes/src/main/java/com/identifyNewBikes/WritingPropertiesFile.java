@@ -8,7 +8,10 @@ import java.util.ArrayList;
 import java.util.Properties;
 
 public class WritingPropertiesFile {
-	public static void writingfile(ArrayList<String> models,String key) { // This is used to store the output.
+	
+	//Method writing the properties file used to store the output
+	public static void writingfile(ArrayList<String> models,String key) {
+		
 		Properties prop1 = new Properties();
 		OutputStream writeFile = null;
 		try {
@@ -33,7 +36,7 @@ public class WritingPropertiesFile {
 				try {
 					writeFile.close();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
+				
 					e.printStackTrace();
 				}
 			}

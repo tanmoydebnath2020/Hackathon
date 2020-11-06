@@ -9,8 +9,8 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.identifyNewBikes.DriverSetup;
-import com.identifyNewBikes.ExcelUtils;
 import com.identifyNewBikes.GoogleSignIn;
+import com.identifyNewBikes.KeywordDriven;
 import com.identifyNewBikes.Main;
 import com.identifyNewBikes.PopularUsedCars;
 import com.identifyNewBikes.UpcomingBikes;
@@ -26,24 +26,22 @@ public class TestNG extends Main{
 		public static Wait wait = new Wait();
 		
 		//Extent report
-		
 		public static ExtentReports report = ExtentReportManager.getReportInstance();
 		public static ExtentTest test;
 		
-	    //Method selecting the browser depending on platform requirements.
+	    //Method invoking the browser depending on platform requirements.
 		@Test
 		public static void getDriver() throws Exception {
 			
 			test = report.createTest("Identify New Bikes");
 			test.log(Status.INFO, "Opening the Browser");
 			
-	    	String[] data=ExcelUtils.readExcelData("Sheet1");
 	    	//Browser Choices
-			String ChromeDriver_WindowsOS=data[4];
-			String FirefoxDriver_WindowsOS=data[5];
-			String OperaDriver_WindowsOS=data[6];
-			String ChromeDriver_MacOS=data[7];
-			String OperaDriver_MacOS=data[8];
+	    	String ChromeDriver_WindowsOS=KeywordDriven.getChromeWindows();
+			String FirefoxDriver_WindowsOS=KeywordDriven.getFirefoxWindows();
+			String OperaDriver_WindowsOS=KeywordDriven.getOperaWindows();
+			String ChromeDriver_MacOS=KeywordDriven.getChromeMac();
+			String OperaDriver_MacOS=KeywordDriven.getOperaMac();
 			
 			//Enter your browser choice in between the inverted Commas
 			driver=DriverSetup.invokeDriver(ChromeDriver_WindowsOS);
@@ -51,20 +49,20 @@ public class TestNG extends Main{
 			
 	    }
 		
-		
+		//Google Sign-in
 		@Test(dependsOnMethods = "getDriver")	
 		public static void getGoogleSignIn() throws Exception {
 			test.log(Status.INFO, "Opening the Google Sign-in Form");
 			//Google Sign-in
 			GoogleSignIn.googleSignIn(driver);
 			
-			String[] data=ExcelUtils.readExcelData("Sheet1");
-			String emailInvalid=data[0];
-			String passwordInvalid=data[1];
+			String emailInvalid=KeywordDriven.getInvalidEmail();
+			String passwordInvalid=KeywordDriven.getInvalidPassword();
 			
 			//Filling the Invalid details		
 			GoogleSignIn.fillLoginForm(emailInvalid,passwordInvalid, driver);
 			test.log(Status.PASS, "Error Message Captured");
+			
 			//Navigating to the official site of Zigwheels
 			test.log(Status.INFO, "Opening the Site : Zigwheels.com");
 			driver.manage().window().maximize();
@@ -73,6 +71,7 @@ public class TestNG extends Main{
 			test.log(Status.PASS, "Zigwheels.com opened successfully");
 		}
 		
+		//Popular Used Cars in Chennai
 		@Test(dependsOnMethods = "getGoogleSignIn")
 		public static void getPopularUsedCars() throws Exception {
 			test.log(Status.INFO, "Getting popular used cars in Chennai");
@@ -82,6 +81,7 @@ public class TestNG extends Main{
 			test.log(Status.PASS, "Popular Used Cars Successful");
 		}
 		
+		//Upcoming Honda Bikes
 		@Test(dependsOnMethods = "getPopularUsedCars")
 		public static void getUpcomingBikes() throws Exception {
 			test.log(Status.INFO, "Getting upcoming Honda Bikes");
@@ -93,6 +93,7 @@ public class TestNG extends Main{
 			
 		}
 		
+		//Closing the application
 		@Test(dependsOnMethods = "getUpcomingBikes")
 		public static void closeApplication(){
 			

@@ -7,9 +7,9 @@
         <methods>
           <include name="getGoogleSignIn"/>
           <include name="getUpcomingBikes"/>
-          <include name="closeBrowser"/>
           <include name="getPopularUsedCars"/>
-          <include name="selectingBrowser"/>
+          <include name="closeApplication"/>
+          <include name="getDriver"/>
         </methods>
       </class> <!-- com.tests.TestNG -->
     </classes>

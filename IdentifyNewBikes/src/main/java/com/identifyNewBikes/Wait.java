@@ -10,6 +10,7 @@ public class Wait {
 	//Method for the Implicit Wait where 15 seconds wait is alloted.
 	//This method is invoked when we need to use implicit wait.
 	public void waitImplicit(WebDriver driver) {
+		//Implicit wait of 15 seconds
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	}
 

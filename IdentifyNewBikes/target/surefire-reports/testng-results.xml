@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-05T15:48:35 IST" name="Surefire suite" finished-at="2020-11-05T15:49:01 IST" duration-ms="26393">
+  <suite started-at="2020-11-06T19:55:34 IST" name="Surefire suite" finished-at="2020-11-06T19:56:14 IST" duration-ms="40646">
     <groups>
     </groups>
-    <test started-at="2020-11-05T15:48:35 IST" name="Surefire test" finished-at="2020-11-05T15:49:01 IST" duration-ms="26393">
+    <test started-at="2020-11-06T19:55:34 IST" name="Surefire test" finished-at="2020-11-06T19:56:14 IST" duration-ms="40646">
       <class name="com.tests.TestNG">
-        <test-method signature="getDriver()[pri:0, instance:com.tests.TestNG@55b7a4e0]" started-at="2020-11-05T15:48:35 IST" name="getDriver" finished-at="2020-11-05T15:48:39 IST" duration-ms="4049" status="PASS">
+        <test-method signature="getDriver()[pri:0, instance:com.tests.TestNG@7bab3f1a]" started-at="2020-11-06T19:55:34 IST" name="getDriver" finished-at="2020-11-06T19:55:39 IST" duration-ms="5330" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method signature="getGoogleSignIn()[pri:0, instance:com.tests.TestNG@55b7a4e0]" started-at="2020-11-05T15:48:39 IST" name="getGoogleSignIn" finished-at="2020-11-05T15:48:51 IST" depends-on-methods="com.tests.TestNG.getDriver" duration-ms="12154" status="PASS">
+        <test-method signature="getGoogleSignIn()[pri:0, instance:com.tests.TestNG@7bab3f1a]" started-at="2020-11-06T19:55:39 IST" name="getGoogleSignIn" finished-at="2020-11-06T19:55:56 IST" depends-on-methods="com.tests.TestNG.getDriver" duration-ms="17040" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getGoogleSignIn -->
-        <test-method signature="getPopularUsedCars()[pri:0, instance:com.tests.TestNG@55b7a4e0]" started-at="2020-11-05T15:48:51 IST" name="getPopularUsedCars" finished-at="2020-11-05T15:48:54 IST" depends-on-methods="com.tests.TestNG.getGoogleSignIn" duration-ms="2329" status="PASS">
+        <test-method signature="getPopularUsedCars()[pri:0, instance:com.tests.TestNG@7bab3f1a]" started-at="2020-11-06T19:55:56 IST" name="getPopularUsedCars" finished-at="2020-11-06T19:56:00 IST" depends-on-methods="com.tests.TestNG.getGoogleSignIn" duration-ms="4304" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPopularUsedCars -->
-        <test-method signature="getUpcomingBikes()[pri:0, instance:com.tests.TestNG@55b7a4e0]" started-at="2020-11-05T15:48:54 IST" name="getUpcomingBikes" finished-at="2020-11-05T15:48:56 IST" depends-on-methods="com.tests.TestNG.getPopularUsedCars" duration-ms="2939" status="PASS">
+        <test-method signature="getUpcomingBikes()[pri:0, instance:com.tests.TestNG@7bab3f1a]" started-at="2020-11-06T19:56:00 IST" name="getUpcomingBikes" finished-at="2020-11-06T19:56:09 IST" depends-on-methods="com.tests.TestNG.getPopularUsedCars" duration-ms="8283" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUpcomingBikes -->
-        <test-method signature="closeApplication()[pri:0, instance:com.tests.TestNG@55b7a4e0]" started-at="2020-11-05T15:48:56 IST" name="closeApplication" finished-at="2020-11-05T15:49:01 IST" depends-on-methods="com.tests.TestNG.getUpcomingBikes" duration-ms="4890" status="PASS">
+        <test-method signature="closeApplication()[pri:0, instance:com.tests.TestNG@7bab3f1a]" started-at="2020-11-06T19:56:09 IST" name="closeApplication" finished-at="2020-11-06T19:56:14 IST" depends-on-methods="com.tests.TestNG.getUpcomingBikes" duration-ms="5639" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->

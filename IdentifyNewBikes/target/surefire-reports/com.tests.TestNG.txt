@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.tests.TestNG
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.756 s - in com.tests.TestNG
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 41.369 s - in com.tests.TestNG

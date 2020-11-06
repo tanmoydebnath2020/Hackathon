@@ -4,11 +4,11 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 
-
+//Extent Report
 public class ExtentReportManager {
-	//public static ExtentHtmlReporter htmlReporter;
+
 			public static ExtentReports report;
-			
+			//Method for Extent Report
 			public static ExtentReports getReportInstance(){
 				
 				if(report == null){
@@ -22,12 +22,13 @@ public class ExtentReportManager {
 					report.setSystemInfo("Build Number", "10.8.1");
 					report.setSystemInfo("Browser", "Chrome");
 					
+					//ExtentHtmlReport
 					htmlReporter.config().setDocumentTitle("Automation Results");
 					htmlReporter.config().setReportName("Test Report");
 					htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
 					htmlReporter.config().setTimeStampFormat("MMM dd, yyyy HH:mm:ss");
 				}
-				
+				//Returning the report.
 				return report;
 			}
 }

@@ -6,9 +6,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
 public class DriverSetup {
-	//Declaring the static variables
+	//Declaring the static variable
 	private static WebDriver driver;
 	
+	//Crating invokeDriver method which will take browserName as a parameter
 	public static WebDriver invokeDriver(String browserName) {
 		
 		//Invoking Chrome Driver in WindowsOS
@@ -51,7 +52,7 @@ public class DriverSetup {
 			
 			driver= new OperaDriver();
 		}
-
+		//Returning the Driver
 		return driver;
 	}
 	
