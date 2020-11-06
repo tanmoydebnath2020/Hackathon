@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-11-05T13:12:59 IST" name="Default suite" finished-at="2020-11-05T13:13:33 IST" duration-ms="34236">
+    <groups>
+    </groups>
+    <test started-at="2020-11-05T13:12:59 IST" name="Default test" finished-at="2020-11-05T13:13:33 IST" duration-ms="34236">
+      <class name="com.tests.TestNG">
+        <test-method signature="getDriver()[pri:0, instance:com.tests.TestNG@5db6b9cd]" started-at="2020-11-05T13:12:59 IST" name="getDriver" finished-at="2020-11-05T13:13:05 IST" duration-ms="5901" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDriver -->
+        <test-method signature="getGoogleSignIn()[pri:0, instance:com.tests.TestNG@5db6b9cd]" started-at="2020-11-05T13:13:05 IST" name="getGoogleSignIn" finished-at="2020-11-05T13:13:18 IST" depends-on-methods="com.tests.TestNG.getDriver" duration-ms="13044" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getGoogleSignIn -->
+        <test-method signature="getPopularUsedCars()[pri:0, instance:com.tests.TestNG@5db6b9cd]" started-at="2020-11-05T13:13:18 IST" name="getPopularUsedCars" finished-at="2020-11-05T13:13:22 IST" depends-on-methods="com.tests.TestNG.getGoogleSignIn" duration-ms="4524" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPopularUsedCars -->
+        <test-method signature="getUpcomingBikes()[pri:0, instance:com.tests.TestNG@5db6b9cd]" started-at="2020-11-05T13:13:22 IST" name="getUpcomingBikes" finished-at="2020-11-05T13:13:27 IST" depends-on-methods="com.tests.TestNG.getPopularUsedCars" duration-ms="5244" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUpcomingBikes -->
+        <test-method signature="closeApplication()[pri:0, instance:com.tests.TestNG@5db6b9cd]" started-at="2020-11-05T13:13:27 IST" name="closeApplication" finished-at="2020-11-05T13:13:33 IST" depends-on-methods="com.tests.TestNG.getUpcomingBikes" duration-ms="5441" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- com.tests.TestNG -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
